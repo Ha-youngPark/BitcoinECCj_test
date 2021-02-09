@@ -40,7 +40,7 @@ public class MainNetParams extends AbstractBitcoinNetParams {
         addressHeader = 0;
         p2shHeader = 5;
         segwitAddressHrp = "bc";
-        port = 8333;
+        port = 9777;
         packetMagic = 0xf9beb4d9L;
         bip32HeaderP2PKHpub = 0x0488b21e; // The 4 byte header that serializes in base58 to "xpub".
         bip32HeaderP2PKHpriv = 0x0488ade4; // The 4 byte header that serializes in base58 to "xprv"
@@ -57,7 +57,7 @@ public class MainNetParams extends AbstractBitcoinNetParams {
         id = ID_MAINNET;
         spendableCoinbaseDepth = 100;
         String genesisHash = genesisBlock.getHashAsString();
-        checkState(genesisHash.equals("000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f"),
+        checkState(genesisHash.equals("6cb5897daa6e48a1e00e71d926f1db1794dd247dd1388b8eacea432dd2199373"),
                 genesisHash);
 
         // This contains (at a minimum) the blocks which are not BIP30 compliant. BIP30 changed how duplicate
