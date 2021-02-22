@@ -60,7 +60,7 @@ public class Block extends Message {
     /** How many bytes are required to represent a block header WITHOUT the trailing 00 length byte. */
     public static final int HEADER_SIZE = 80;
 
-    static final long ALLOWED_TIME_DRIFT = 2 * 60 * 60; // Same value as Bitcoin Core.
+    static final long ALLOWED_TIME_DRIFT = 60 * 60; // Same value as Bitcoin Core.
 
     /**
      * A constant shared by the entire network: how large in bytes a block is allowed to be. One day we may have to
@@ -119,7 +119,7 @@ public class Block extends Message {
         super(params);
         // Set up a few basic things. We are not complete after this though.
         version = setVersion;
-        difficultyTarget = 0x1d07fff8L;
+        difficultyTarget = 0x358d1c1c;
         time = Utils.currentTimeSeconds();
         prevBlockHash = Sha256Hash.ZERO_HASH;
 
